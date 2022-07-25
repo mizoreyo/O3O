@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en" class="light">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>你好啊O3O</title>
+  <script src="./O3O.js"></script>
+  <link rel="stylesheet" href="./O3O.css">
+  <link rel="stylesheet"
+    href="https://fonts.googleapis.com/css2?family=JetBrains+Mono&amp;family=Noto+Sans+SC:wght@300&amp;display=swap.css">
+  <style>
+    html {
+      font-size: 62.5%;
+    }
+
+    .article {
+      width: 600px;
+    }
+  </style>
+  <script>
+    var isNight = false
+    function switchMode() {
+      if (isNight) {
+        document.documentElement.className = "light"
+        isNight = false
+      } else {
+        document.documentElement.className = "dark"
+        isNight = true
+      }
+    }
+  </script>
+</head>
+
+<body>
+  <div class="article">
+    哈哈哈
+    <button onclick="switchMode()">黑/白</button>
+    <script>
+      var o3o = new O3O({})
+      o3o.init()
+    </script>
+  </div>
+</body>
+
+</html>

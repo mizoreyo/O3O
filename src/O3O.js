@@ -110,7 +110,7 @@ export default class O3O {
     const er = this.emailCheck();
     const sr = this.siteCheck();
     const cr = this.commentCheck();
-    if (nr && er && sr && cr === false) {
+    if ((nr && er && sr && cr) === false) {
       console.log("校验错误,不可提交");
       return;
     } else {

@@ -135,8 +135,9 @@ export default class O3O {
         .then(json => {
           console.log("提交评论结果:", json);
           this.getComments();
-          // 将评论框置空，防止刷屏
+          // 将评论置空，防止刷屏
           this.options.o3oNode.getElementsByClassName("c-area")[0].value = "";
+          this.commentInfo.comment = "";
         })
         .catch(error => {
           console.error(error);

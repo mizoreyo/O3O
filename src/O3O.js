@@ -115,6 +115,8 @@ export default class O3O {
       return;
     } else {
       console.log("可提交");
+      // 替换特殊字符，防止恶意注入
+      let commentSafe = this.commentInfo.comment.replace(/</g, "&lt;").replace(/>/g, "&gt;");
       let commentBody = {
         key: this.options.key,
         pageId: this.options.pageId,
@@ -122,7 +124,7 @@ export default class O3O {
         name: this.userInfo.name,
         email: this.userInfo.email,
         site: this.userInfo.site,
-        comment: this.commentInfo.comment
+        comment: commentSafe
       };
       fetch(`${this.options.api}/comment`, {
         method: "POST",
